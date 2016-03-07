@@ -11,6 +11,7 @@ url = '%s/orgs/%s/repos' % (BASE, ORG)
 repositories = requests.get(url).json()
 
 # Print the commit messages of all commits for each repository
+# https://developer.github.com/v3/repos/commits/#list-commits-on-a-repository
 for repository in repositories:
     url = strip_url_parameters(repository['commits_url'])
     commits = requests.get(url).json()
