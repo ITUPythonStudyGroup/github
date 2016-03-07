@@ -9,3 +9,4 @@
 ## Index
 
 1. Fetches a list of organization repositories and prints their names.
+2. Fetches a list of organization repositories and prints the commit messages of all the commits for each repository.
