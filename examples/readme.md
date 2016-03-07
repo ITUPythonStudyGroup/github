@@ -11,3 +11,7 @@
 1. Fetches a list of organization repositories and prints their names.
 2. Fetches a list of organization repositories and prints the commit messages of all the commits for each repository.
 3. Fetches a list of organization repositories, fetches the commits of each repository in parallel, and prints the commit messages of each repository.
+
+## Caveats
+
+When playing with these examples you might run into the rate-limit of unauthorized API requests: https://developer.github.com/v3/#rate-limiting
