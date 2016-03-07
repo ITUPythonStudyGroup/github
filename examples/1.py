@@ -3,7 +3,7 @@ import requests
 BASE = 'https://api.github.com'
 ORG = 'ITUPythonStudyGroup'
 
-# Feth a list of organization repositories
+# Fetch a list of organization repositories
 # https://developer.github.com/v3/repos/#list-organization-repositories
 url = '%s/orgs/%s/repos' % (BASE, ORG)
 response = requests.get(url)

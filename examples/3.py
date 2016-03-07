@@ -10,12 +10,12 @@ def get_commits(repository):
     url = strip_url_parameters(repository['commits_url'])
     return requests.get(url).json()
 
-# Feth a list of organization repositories
+# Fetch a list of organization repositories
 # https://developer.github.com/v3/repos/#list-organization-repositories
 url = '%s/orgs/%s/repos' % (BASE, ORG)
 repositories = requests.get(url).json()
 
-# Retrieve commits for each repository in parallel and print the commit messages
+# Fetch commits for each repository in parallel and print the commit messages
 # https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.map
 # https://developer.github.com/v3/repos/commits/#list-commits-on-a-repository
 with Pool(len(repositories)) as pool:

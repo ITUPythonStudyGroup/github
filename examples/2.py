@@ -5,7 +5,7 @@ ORG = 'ITUPythonStudyGroup'
 
 def strip_url_parameters(url): return re.sub(r'\{.*\}', '', url)
 
-# Feth a list of organization repositories
+# Fetch a list of organization repositories
 # https://developer.github.com/v3/repos/#list-organization-repositories
 url = '%s/orgs/%s/repos' % (BASE, ORG)
 repositories = requests.get(url).json()
