@@ -1,6 +1,6 @@
 import requests, re
 from myLib import *
-from bokeh.charts import Histogram, output_file, show
+from bokeh.charts import Step, show, output_file
 
 """
 Shows the recent push activity of a single given user on a histogram.
@@ -10,7 +10,7 @@ TODO
 """
 
 # Declare variables
-USER = "JoshuaKoh" # TODO Change this to see different users' graphs.
+USER = "QuiGonSwag" # TODO Change this to see different users' graphs.
 
 eventCount = [0] * 24
 hours = []
@@ -38,7 +38,9 @@ for event in events:
 # 24 as the number of columns drawn,
 # cyan as the color of the bars drawn,
 # graphTitle as the printed title over the graph.
-p = Histogram(eventCount, values="hour", bins=24, color="cyan", title=graphTitle)
+p = Step(eventCount, xlabel='hours', ylabel='pushes', color='cyan', title=graphTitle)
 output_file(outputFileStr)
 
 show(p)
+
+print eventCount
