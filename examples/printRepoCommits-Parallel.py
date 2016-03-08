@@ -1,10 +1,6 @@
 import requests, re
 from multiprocessing import Pool
-
-BASE = 'https://api.github.com'
-ORG = 'ITUPythonStudyGroup'
-
-def strip_url_parameters(url): return re.sub(r'\{.*\}', '', url)
+from myLib import *
 
 def get_commits(repository):
     url = strip_url_parameters(repository['commits_url'])

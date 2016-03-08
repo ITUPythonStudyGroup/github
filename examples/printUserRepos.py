@@ -1,7 +1,5 @@
 import requests
-
-BASE = 'https://api.github.com'
-ORG = 'ITUPythonStudyGroup'
+from myLib import *
 
 # Fetch a list of organization repositories
 # https://developer.github.com/v3/repos/#list-organization-repositories
