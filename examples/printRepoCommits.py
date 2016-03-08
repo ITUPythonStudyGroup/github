@@ -1,6 +1,10 @@
 import requests, re
 from myLib import *
 
+"""
+Fetches a list of organization repositories and prints the commit messages of all the commits for each repository.
+"""
+
 # Fetch a list of organization repositories
 # https://developer.github.com/v3/repos/#list-organization-repositories
 url = '%s/orgs/%s/repos' % (BASE, ORG)

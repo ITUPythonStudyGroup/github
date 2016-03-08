@@ -2,6 +2,10 @@ import requests, re
 from multiprocessing import Pool
 from myLib import *
 
+"""
+Fetches a list of organization repositories, fetches the commits of each repository in parallel, and prints the commit messages of each repository.
+"""
+
 def get_commits(repository):
     url = strip_url_parameters(repository['commits_url'])
     return requests.get(url).json()
