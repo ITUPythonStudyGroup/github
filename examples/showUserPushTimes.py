@@ -10,7 +10,7 @@ TODO
 """
 
 # Declare variables
-USER = "QuiGonSwag" # TODO Change this to see different users' graphs.
+USER = "JoshuaKoh" # TODO Change this to see different users' graphs.
 
 eventCount = [0] * 24
 hours = []
@@ -38,9 +38,9 @@ for event in events:
 # 24 as the number of columns drawn,
 # cyan as the color of the bars drawn,
 # graphTitle as the printed title over the graph.
-p = Step(eventCount, xlabel='hours', ylabel='pushes', color='cyan', title=graphTitle)
+p = Step(eventCount, xlabel='hours', ylabel='pushes', color='#000000', title=graphTitle)
 output_file(outputFileStr)
 
 show(p)
 
-print eventCount
+# print eventCount
