@@ -93,7 +93,6 @@ for item in de_git['items']:
 
 '''
 Note: This API has a limit as well. 
-I have not added authentication to this part of the code yet.
 '''
 
 for repository in usersDict:
