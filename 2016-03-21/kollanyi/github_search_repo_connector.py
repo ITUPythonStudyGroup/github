@@ -80,12 +80,13 @@ print(counter)
 #############################################
 
 usersDict = {}    # This creates an empty dictionary
-ide = 1 # Creates the ID for the dictionary
 
 for item in de_git['items']:
-    usersDict[ide] = list([{'username':item['owner']['login']}, {'url':item['owner']['url']}])
-    ide += 1 ;
+    usersDict[item['id']] = list([{'name':item['name']}, {'language':item['language']}, {'username':item['owner']['login']}, {'url':item['owner']['url']}])
 
+'''
+If you re-run the for loop, it will add the items to the dictionary, bc. it uses unique repo ids
+'''
 
 #######################################
 ### Call the API for more user info ###
