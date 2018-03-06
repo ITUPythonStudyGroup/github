@@ -9,7 +9,6 @@ import random
 
 USER = "joshuakoh" # TODO Change this to see different users' graphs.
 GHA_TOKEN = os.environ['GHA_TOKEN']
-
 user_url = "https://api.github.com/users/%s" % USER
 
 def github(path):
